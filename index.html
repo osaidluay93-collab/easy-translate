@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1769e0">
+  <title>Easy Translate</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="globe">🌍</div>
+      <div>
+        <h1>Easy Translate</h1>
+        <p>ترجم كلماتك وجملك بسهولة</p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="languages">
+        <label>من
+          <select id="fromLang"></select>
+        </label>
+        <button id="swap" class="swap" aria-label="تبديل اللغات">⇄</button>
+        <label>إلى
+          <select id="toLang"></select>
+        </label>
+      </div>
+
+      <label class="field-label" for="sourceText">النص المراد ترجمته</label>
+      <textarea id="sourceText" maxlength="500" placeholder="اكتب النص هنا..."></textarea>
+      <div class="row">
+        <small id="count">0 / 500</small>
+        <button id="clear" class="text-button">مسح النص</button>
+      </div>
+
+      <button id="translate" class="primary">ترجم الآن</button>
+      <p id="status" role="status"></p>
+
+      <label class="field-label" for="resultText">الترجمة</label>
+      <div class="result-wrap">
+        <textarea id="resultText" readonly placeholder="ستظهر الترجمة هنا..."></textarea>
+      </div>
+      <div class="actions">
+        <button id="copy" class="secondary">نسخ الترجمة</button>
+        <button id="speak" class="secondary">🔊 استمع</button>
+      </div>
+    </section>
+    <footer>Easy Translate · الترجمة تحتاج اتصالاً بالإنترنت</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
